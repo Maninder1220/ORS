@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ff0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.form-container {
+    background-color: rgba(255, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    width: 75%; /* 50% bigger than the original 50% */
+    max-width: 400px; /* Ensure it doesn't get too wide */
+    resize: both; /* Allow resizing both horizontally and vertically */
+    overflow: auto; /* Ensure content is visible when resized */
+    position: absolute; /* Allow dragging */
+    cursor: move; /* Change cursor to move */
+}
+
+.form-container:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style for the "NAME" placeholder */
+#name::placeholder {
+    font-weight: bold;
+    color: #000;
+}
+#name:hover::placeholder {
+    color: darkred;
+}
+
+/* Style for the "NUMBER" placeholder */
+#number::placeholder {
+    font-weight: bold;
+    color: #000;
+}
+#number:hover::placeholder {
+    color: darkred;
+}
+
+/* Style for the "E-MAIL" placeholder */
+#email::placeholder {
+    font-weight: bold;
+    color: #000;
+}
+#email:hover::placeholder {
+    color: darkred;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(255, 0, 0, 0.2);
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+    color: rgba(255, 0, 0, 0.8);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        width: 100%;
+    }
+}
